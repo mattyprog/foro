@@ -34,7 +34,7 @@ Su GitHub apri il repository, poi **Settings > Secrets and variables > Actions >
 | `SYNC_PASSPHRASE` | la password del passo 2 |
 
 I secret non si possono più leggere, neanche da te, e GitHub li nasconde anche nei log.
-Finché i due secret non ci sono, il workflow programmato parte ma si ferma al primo passo, senza errori e senza email di fallimento.
+Il workflow **Garmin sync** è spento finché la sync non è configurata, così non gira a vuoto ogni 3 ore: lo accendi al passo 4. Se lo accendi prima di creare i secret, si ferma al primo passo, senza errori e senza email di fallimento.
 
 Facoltativo, nella scheda **Variables** della stessa pagina:
 
@@ -45,7 +45,7 @@ Facoltativo, nella scheda **Variables** della stessa pagina:
 
 ## 4. Avvia la prima sync
 
-Apri **Actions > Garmin sync > Run workflow** e conferma. Se GitHub chiede di abilitare le Actions, abilitale.
+Apri **Actions > Garmin sync**, premi **Enable workflow** (è spento finché la sync non è configurata), poi **Run workflow** e conferma. Se GitHub chiede di abilitare le Actions, abilitale.
 
 La prima volta scarica 12 mesi di attività, i dettagli (giri, traccia, frequenza cardiaca, passo, serie di forza) degli ultimi 90 giorni, 90 giorni di benessere (sonno, HRV, FC a riposo, stress, Body Battery, passi...) e tutto lo storico del peso. Può volerci qualche minuto.
 
