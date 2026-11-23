@@ -1,0 +1,17 @@
+node_modules
+dist
+coverage
+*.log
+.env
+.env.*
+# dati personali e chiavi: mai nel repo
+data-local/
+*.key
+secrets*
+scripts/sync/.venv/
+scripts/sync/out/
+__pycache__/
+.impeccable/cache/
+# appunti di progetto e di design: restano sul PC
+PRODUCT.md
+.impeccable/
