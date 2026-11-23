@@ -1,0 +1,517 @@
+{
+ "meta": {
+  "nome": "Calendario indicativo di frutta e verdura di stagione nel Lazio",
+  "fonte": "Elaborazione (novembre 2026) da ARSIAL, Agenzia Regionale per lo Sviluppo e l'Innovazione dell'Agricoltura del Lazio (www.arsial.it) e Campagna Amica (www.campagnamica.it).",
+  "nota": "Indicativo: l'inizio e la fine della stagione cambiano di qualche settimana con l'annata e la zona. Il campo \"nota\" segnala i prodotti a inizio stagione.",
+  "aggiornato": "2026-11-23"
+ },
+ "mesi": {
+  "1": {
+   "verdura": [
+    {
+     "nome": "broccoli"
+    },
+    {
+     "nome": "cavolfiori"
+    },
+    {
+     "nome": "carciofi",
+     "nota": "inizio"
+    },
+    {
+     "nome": "cicoria"
+    },
+    {
+     "nome": "finocchi"
+    },
+    {
+     "nome": "radicchio"
+    },
+    {
+     "nome": "spinaci"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "arance"
+    },
+    {
+     "nome": "kiwi"
+    },
+    {
+     "nome": "limoni"
+    },
+    {
+     "nome": "mandarini"
+    },
+    {
+     "nome": "mele"
+    },
+    {
+     "nome": "pere"
+    }
+   ]
+  },
+  "2": {
+   "verdura": [
+    {
+     "nome": "bietole"
+    },
+    {
+     "nome": "broccoli"
+    },
+    {
+     "nome": "carciofi romaneschi",
+     "chiave": "carciofi"
+    },
+    {
+     "nome": "cavoli"
+    },
+    {
+     "nome": "finocchi"
+    },
+    {
+     "nome": "puntarelle"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "arance"
+    },
+    {
+     "nome": "kiwi"
+    },
+    {
+     "nome": "mandarini"
+    },
+    {
+     "nome": "mele"
+    },
+    {
+     "nome": "pere"
+    }
+   ]
+  },
+  "3": {
+   "verdura": [
+    {
+     "nome": "asparagi",
+     "nota": "inizio"
+    },
+    {
+     "nome": "carciofi romaneschi",
+     "chiave": "carciofi"
+    },
+    {
+     "nome": "cicoria"
+    },
+    {
+     "nome": "cipollotti"
+    },
+    {
+     "nome": "puntarelle"
+    },
+    {
+     "nome": "spinaci"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "arance"
+    },
+    {
+     "nome": "fragole",
+     "nota": "inizio"
+    },
+    {
+     "nome": "kiwi"
+    },
+    {
+     "nome": "limoni"
+    },
+    {
+     "nome": "mele"
+    }
+   ]
+  },
+  "4": {
+   "verdura": [
+    {
+     "nome": "asparagi"
+    },
+    {
+     "nome": "agretti"
+    },
+    {
+     "nome": "carciofi romaneschi",
+     "chiave": "carciofi"
+    },
+    {
+     "nome": "fave"
+    },
+    {
+     "nome": "lattuga"
+    },
+    {
+     "nome": "piselli"
+    },
+    {
+     "nome": "ravanelli"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "fragole"
+    },
+    {
+     "nome": "nespole"
+    }
+   ]
+  },
+  "5": {
+   "verdura": [
+    {
+     "nome": "agretti"
+    },
+    {
+     "nome": "fagiolini"
+    },
+    {
+     "nome": "fave"
+    },
+    {
+     "nome": "piselli"
+    },
+    {
+     "nome": "pomodori",
+     "nota": "primi"
+    },
+    {
+     "nome": "zucchine"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "ciliegie"
+    },
+    {
+     "nome": "fragole"
+    },
+    {
+     "nome": "nespole"
+    }
+   ]
+  },
+  "6": {
+   "verdura": [
+    {
+     "nome": "cetrioli"
+    },
+    {
+     "nome": "fagiolini"
+    },
+    {
+     "nome": "melanzane"
+    },
+    {
+     "nome": "peperoni"
+    },
+    {
+     "nome": "pomodori"
+    },
+    {
+     "nome": "rucola"
+    },
+    {
+     "nome": "zucchine"
+    },
+    {
+     "nome": "fiori di zucca"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "albicocche"
+    },
+    {
+     "nome": "ciliegie"
+    },
+    {
+     "nome": "fichi fioroni",
+     "chiave": "fichi"
+    },
+    {
+     "nome": "meloni"
+    },
+    {
+     "nome": "pesche"
+    },
+    {
+     "nome": "prugne"
+    }
+   ]
+  },
+  "7": {
+   "verdura": [
+    {
+     "nome": "cetrioli"
+    },
+    {
+     "nome": "melanzane"
+    },
+    {
+     "nome": "peperoni"
+    },
+    {
+     "nome": "pomodori"
+    },
+    {
+     "nome": "zucchine"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "albicocche"
+    },
+    {
+     "nome": "angurie"
+    },
+    {
+     "nome": "fichi"
+    },
+    {
+     "nome": "meloni"
+    },
+    {
+     "nome": "pesche"
+    },
+    {
+     "nome": "prugne"
+    },
+    {
+     "nome": "susine",
+     "chiave": "prugne"
+    }
+   ]
+  },
+  "8": {
+   "verdura": [
+    {
+     "nome": "melanzane"
+    },
+    {
+     "nome": "peperoni"
+    },
+    {
+     "nome": "pomodori"
+    },
+    {
+     "nome": "zucca",
+     "nota": "inizio"
+    },
+    {
+     "nome": "zucchine"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "angurie"
+    },
+    {
+     "nome": "fichi"
+    },
+    {
+     "nome": "meloni"
+    },
+    {
+     "nome": "more"
+    },
+    {
+     "nome": "pesche"
+    },
+    {
+     "nome": "uva",
+     "nota": "inizio"
+    }
+   ]
+  },
+  "9": {
+   "verdura": [
+    {
+     "nome": "bietole"
+    },
+    {
+     "nome": "broccoletti"
+    },
+    {
+     "nome": "fagioli"
+    },
+    {
+     "nome": "melanzane"
+    },
+    {
+     "nome": "peperoni"
+    },
+    {
+     "nome": "pomodori"
+    },
+    {
+     "nome": "zucca"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "fichi"
+    },
+    {
+     "nome": "mele"
+    },
+    {
+     "nome": "pere"
+    },
+    {
+     "nome": "uva"
+    },
+    {
+     "nome": "prugne"
+    }
+   ]
+  },
+  "10": {
+   "verdura": [
+    {
+     "nome": "broccoletti romani",
+     "chiave": "broccoletti"
+    },
+    {
+     "nome": "cavoli"
+    },
+    {
+     "nome": "cicoria"
+    },
+    {
+     "nome": "finocchi"
+    },
+    {
+     "nome": "porri"
+    },
+    {
+     "nome": "zucca"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "cachi"
+    },
+    {
+     "nome": "castagne"
+    },
+    {
+     "nome": "kiwi"
+    },
+    {
+     "nome": "mele"
+    },
+    {
+     "nome": "melograni",
+     "chiave": "melagrana"
+    },
+    {
+     "nome": "pere"
+    },
+    {
+     "nome": "uva"
+    }
+   ]
+  },
+  "11": {
+   "verdura": [
+    {
+     "nome": "broccoli"
+    },
+    {
+     "nome": "carciofi"
+    },
+    {
+     "nome": "cavolfiori"
+    },
+    {
+     "nome": "cicoria"
+    },
+    {
+     "nome": "finocchi"
+    },
+    {
+     "nome": "puntarelle",
+     "nota": "inizio"
+    },
+    {
+     "nome": "spinaci"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "cachi"
+    },
+    {
+     "nome": "castagne"
+    },
+    {
+     "nome": "kiwi"
+    },
+    {
+     "nome": "mandaranci",
+     "chiave": "clementine"
+    },
+    {
+     "nome": "mele"
+    },
+    {
+     "nome": "pere"
+    }
+   ]
+  },
+  "12": {
+   "verdura": [
+    {
+     "nome": "broccoli"
+    },
+    {
+     "nome": "carciofi"
+    },
+    {
+     "nome": "cavolfiori"
+    },
+    {
+     "nome": "cicoria"
+    },
+    {
+     "nome": "finocchi"
+    },
+    {
+     "nome": "puntarelle"
+    },
+    {
+     "nome": "radicchio"
+    }
+   ],
+   "frutta": [
+    {
+     "nome": "arance"
+    },
+    {
+     "nome": "kiwi"
+    },
+    {
+     "nome": "limoni"
+    },
+    {
+     "nome": "mandarini"
+    },
+    {
+     "nome": "mele"
+    }
+   ]
+  }
+ }
+}

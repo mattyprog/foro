@@ -1,0 +1,4 @@
+# file scaricati e ambiente Python locale: non vanno nel repo
+.venv/
+raw/
+__pycache__/

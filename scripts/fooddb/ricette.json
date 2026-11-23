@@ -1,0 +1,826 @@
+{
+  "_formato": "Ogni piatto: ingredienti in grammi (crudi, come si pesano in cucina) che puntano agli id di src/data/alimenti.json; resaG = peso cotto di tutta la ricetta; porzioneG = porzione standard servita; variabilita = scarto tipico (+/-) usato per gli intervalli. Le ipotesi stanno in 'nota'.",
+  "piatti": [
+    {
+      "id": "carbonara",
+      "nome": "Spaghetti alla carbonara",
+      "alias": ["carbonara", "rigatoni alla carbonara", "pasta alla carbonara", "mezze maniche alla carbonara"],
+      "categoria": "Primi piatti",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "pasta-di-semola-cruda", "g": 100},
+        {"id": "guanciale", "g": 30},
+        {"id": "tuorlo-d-uovo-crudo", "g": 25},
+        {"id": "pecorino-romano", "g": 20},
+        {"id": "pepe-nero", "g": 1}
+      ],
+      "resaG": 300, "porzioneG": 300, "variabilita": 0.25,
+      "porzioni": [{"label": "1 piatto (trattoria)", "grams": 300}, {"label": "1 piatto abbondante", "grams": 380}],
+      "nota": "Porzione da trattoria: 100 g di pasta secca, 30 g di guanciale rosolato (il grasso resta nel condimento), 25 g di tuorlo, 20 g di pecorino. Niente panna, niente olio. La pasta cotta pesa circa 2,2 volte quella secca."
+    },
+    {
+      "id": "cacio-e-pepe",
+      "nome": "Cacio e pepe",
+      "alias": ["tonnarelli cacio e pepe", "spaghetti cacio e pepe", "pasta cacio e pepe"],
+      "categoria": "Primi piatti",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "pasta-di-semola-cruda", "g": 100},
+        {"id": "pecorino-romano", "g": 40},
+        {"id": "pepe-nero", "g": 2}
+      ],
+      "resaG": 280, "porzioneG": 280, "variabilita": 0.25,
+      "porzioni": [{"label": "1 piatto (trattoria)", "grams": 280}],
+      "nota": "100 g di pasta secca e 40 g di pecorino romano mantecati con acqua di cottura; niente burro ne olio."
+    },
+    {
+      "id": "amatriciana",
+      "nome": "Bucatini all'amatriciana",
+      "alias": ["amatriciana", "matriciana", "pasta all'amatriciana", "rigatoni all'amatriciana"],
+      "categoria": "Primi piatti",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "pasta-di-semola-cruda", "g": 100},
+        {"id": "guanciale", "g": 30},
+        {"id": "pomodori-pelati-in-scatola", "g": 120},
+        {"id": "pecorino-romano", "g": 15},
+        {"id": "peperoncino-in-polvere", "g": 0.5}
+      ],
+      "resaG": 320, "porzioneG": 320, "variabilita": 0.25,
+      "porzioni": [{"label": "1 piatto (trattoria)", "grams": 320}],
+      "nota": "Guanciale rosolato nel suo grasso, pelati ristretti (120 g crudi diventano circa 70 g), 15 g di pecorino. Senza olio, come da disciplinare di Amatrice."
+    },
+    {
+      "id": "gricia",
+      "nome": "Rigatoni alla gricia",
+      "alias": ["gricia", "pasta alla gricia", "amatriciana bianca"],
+      "categoria": "Primi piatti",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "pasta-di-semola-cruda", "g": 100},
+        {"id": "guanciale", "g": 30},
+        {"id": "pecorino-romano", "g": 20},
+        {"id": "pepe-nero", "g": 1}
+      ],
+      "resaG": 285, "porzioneG": 285, "variabilita": 0.25,
+      "porzioni": [{"label": "1 piatto (trattoria)", "grams": 285}],
+      "nota": "Come la carbonara senza uovo: 100 g di pasta, 30 g di guanciale con il suo grasso, 20 g di pecorino."
+    },
+    {
+      "id": "suppli",
+      "nome": "Supplì",
+      "alias": ["suppli", "supplì al telefono", "suppli al ragu", "crocchetta di riso"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano", "fritto"],
+      "ingredienti": [
+        {"id": "riso-bianco-crudo", "g": 28},
+        {"id": "acqua", "g": 40},
+        {"id": "passata-di-pomodoro", "g": 22},
+        {"id": "macinato-di-manzo-15-grassi-crudo", "g": 10},
+        {"id": "mozzarella-fior-di-latte", "g": 15},
+        {"id": "parmigiano-reggiano", "g": 3},
+        {"id": "uovo-intero-crudo", "g": 7},
+        {"id": "pangrattato", "g": 9},
+        {"id": "olio-di-arachide", "g": 8},
+        {"id": "sale-da-cucina", "g": 0.5}
+      ],
+      "resaG": 120, "porzioneG": 120, "variabilita": 0.25,
+      "porzioni": [{"label": "1 supplì", "grams": 120}],
+      "nota": "Riso cotto nel sugo con un po' di ragu, cuore di mozzarella, impanato e fritto. Olio assorbito in frittura stimato in 8 g a pezzo (circa 7% del peso), valore tipico per un fritto impanato."
+    },
+    {
+      "id": "pizza-bianca-romana",
+      "nome": "Pizza bianca romana",
+      "alias": ["pizza bianca", "focaccia", "pizza bianca al taglio", "pizza bianca del forno"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano", "forno"],
+      "ingredienti": [
+        {"id": "farina-0", "g": 500},
+        {"id": "acqua", "g": 400},
+        {"id": "olio-extravergine-di-oliva", "g": 40},
+        {"id": "sale-da-cucina", "g": 12},
+        {"id": "lievito-di-birra-fresco", "g": 4}
+      ],
+      "resaG": 750, "porzioneG": 100, "variabilita": 0.2,
+      "porzioni": [{"label": "1 trancio (100 g)", "grams": 100}, {"label": "1 trancio grande", "grams": 150}, {"label": "1 pezzetto", "grams": 50}],
+      "nota": "Impasto del forno molto idratato (80%) con olio nell'impasto e in superficie; in cottura evapora circa il 22% del peso. Si vende a peso: la porzione indicata e' 100 g."
+    },
+    {
+      "id": "pizza-rossa-al-taglio",
+      "nome": "Pizza rossa al taglio",
+      "alias": ["pizza rossa", "pizza al pomodoro", "pizza al taglio", "pizza rossa del forno"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano", "forno"],
+      "ingredienti": [
+        {"id": "farina-0", "g": 500},
+        {"id": "acqua", "g": 380},
+        {"id": "olio-extravergine-di-oliva", "g": 35},
+        {"id": "sale-da-cucina", "g": 10},
+        {"id": "lievito-di-birra-fresco", "g": 4},
+        {"id": "passata-di-pomodoro", "g": 250},
+        {"id": "origano-secco", "g": 2}
+      ],
+      "resaG": 890, "porzioneG": 120, "variabilita": 0.2,
+      "porzioni": [{"label": "1 trancio", "grams": 120}, {"label": "1 trancio grande", "grams": 180}],
+      "nota": "Stessa base della bianca con passata in superficie; in cottura evapora circa un quarto del peso."
+    },
+    {
+      "id": "pizza-margherita-romana",
+      "nome": "Pizza margherita (tonda romana)",
+      "alias": ["margherita", "pizza margherita", "pizza tonda", "pizza romana", "pizza in pizzeria", "pizza scrocchiarella"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano", "pizzeria"],
+      "ingredienti": [
+        {"id": "farina-0", "g": 125},
+        {"id": "acqua", "g": 75},
+        {"id": "olio-extravergine-di-oliva", "g": 8},
+        {"id": "sale-da-cucina", "g": 3},
+        {"id": "lievito-di-birra-fresco", "g": 1},
+        {"id": "passata-di-pomodoro", "g": 70},
+        {"id": "mozzarella-fior-di-latte", "g": 90},
+        {"id": "basilico-fresco", "g": 1}
+      ],
+      "resaG": 315, "porzioneG": 315, "variabilita": 0.2,
+      "porzioni": [{"label": "1 pizza intera", "grams": 315}, {"label": "mezza pizza", "grams": 158}, {"label": "1 spicchio", "grams": 40}],
+      "nota": "Pizza sottile e croccante da pizzeria romana: panetto da circa 200 g (125 g di farina), 70 g di pomodoro, 90 g di fior di latte, 8 g di olio tra impasto e filo finale."
+    },
+    {
+      "id": "trapizzino-pollo-alla-cacciatora",
+      "nome": "Trapizzino al pollo alla cacciatora",
+      "alias": ["trapizzino", "trapizzino pollo"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano"],
+      "ingredienti": [
+        {"id": "farina-0", "g": 60},
+        {"id": "acqua", "g": 45},
+        {"id": "olio-extravergine-di-oliva", "g": 9},
+        {"id": "sale-da-cucina", "g": 1.5},
+        {"id": "lievito-di-birra-fresco", "g": 0.5},
+        {"id": "coscia-di-pollo-cruda-senza-pelle", "g": 70},
+        {"id": "polpa-di-pomodoro-in-scatola", "g": 40},
+        {"id": "cipolla-cruda", "g": 10},
+        {"id": "rosmarino-fresco", "g": 0.5}
+      ],
+      "resaG": 180, "porzioneG": 180, "variabilita": 0.2,
+      "porzioni": [{"label": "1 trapizzino", "grams": 180}],
+      "nota": "Tasca di pizza bianca da circa 90 g e 90 g di pollo alla cacciatora cotto in umido (4 g di olio nell'impasto, 5 g nel ripieno)."
+    },
+    {
+      "id": "maritozzo-con-la-panna",
+      "nome": "Maritozzo con la panna",
+      "alias": ["maritozzo", "maritozzi", "maritozzo alla panna"],
+      "categoria": "Colazione e bar",
+      "tag": ["romano", "bar"],
+      "ingredienti": [
+        {"id": "farina-0", "g": 38},
+        {"id": "latte-intero", "g": 12},
+        {"id": "uovo-intero-crudo", "g": 7},
+        {"id": "zucchero-bianco", "g": 14},
+        {"id": "burro", "g": 5},
+        {"id": "miele", "g": 2},
+        {"id": "lievito-di-birra-fresco", "g": 1.5},
+        {"id": "sale-da-cucina", "g": 0.3},
+        {"id": "panna-fresca-liquida-30-grassi", "g": 70}
+      ],
+      "resaG": 140, "porzioneG": 140, "variabilita": 0.2,
+      "porzioni": [{"label": "1 maritozzo", "grams": 140}],
+      "nota": "Panino dolce da circa 62 g e 70 g di panna montata zuccherata (6 g di zucchero nella panna, il resto nell'impasto e nella spolverata)."
+    },
+    {
+      "id": "carciofi-alla-romana",
+      "nome": "Carciofi alla romana",
+      "alias": ["carciofi in tegame", "carciofi con mentuccia"],
+      "categoria": "Contorni",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "carciofi-crudi", "g": 160},
+        {"id": "olio-extravergine-di-oliva", "g": 10},
+        {"id": "aglio-crudo", "g": 2},
+        {"id": "menta-fresca", "g": 2},
+        {"id": "prezzemolo-fresco", "g": 2},
+        {"id": "sale-da-cucina", "g": 1},
+        {"id": "acqua", "g": 30}
+      ],
+      "resaG": 160, "porzioneG": 160, "variabilita": 0.25,
+      "porzioni": [{"label": "1 porzione (2 carciofi)", "grams": 160}, {"label": "1 carciofo", "grams": 80}],
+      "nota": "Due carciofi puliti (160 g di parte edibile) stufati con olio, acqua, aglio e mentuccia; si conta tutto l'olio del tegame (10 g)."
+    },
+    {
+      "id": "carciofo-alla-giudia",
+      "nome": "Carciofo alla giudia",
+      "alias": ["carciofi alla giudia", "carciofo fritto", "carciofo alla giudea"],
+      "categoria": "Contorni",
+      "tag": ["romano", "fritto", "ristorante"],
+      "ingredienti": [
+        {"id": "carciofi-crudi", "g": 130},
+        {"id": "olio-di-arachide", "g": 15},
+        {"id": "sale-da-cucina", "g": 1}
+      ],
+      "resaG": 100, "porzioneG": 100, "variabilita": 0.3,
+      "porzioni": [{"label": "1 carciofo", "grams": 100}],
+      "nota": "Carciofo intero fritto due volte: olio assorbito stimato in 15 g (circa 15% del peso fritto); in frittura evapora circa il 30% dell'acqua."
+    },
+    {
+      "id": "puntarelle-con-le-alici",
+      "nome": "Puntarelle con le alici",
+      "alias": ["puntarelle", "puntarelle in salsa di alici", "insalata di puntarelle"],
+      "categoria": "Contorni",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "puntarelle-crude", "g": 140},
+        {"id": "acciughe-sott-olio-sgocciolate", "g": 8},
+        {"id": "olio-extravergine-di-oliva", "g": 10},
+        {"id": "aglio-crudo", "g": 1},
+        {"id": "aceto-di-vino", "g": 3}
+      ],
+      "resaG": 160, "porzioneG": 160, "variabilita": 0.25,
+      "porzioni": [{"label": "1 porzione", "grams": 160}],
+      "nota": "Condimento classico di alici, aglio, aceto e olio emulsionati: 10 g di olio a porzione, la quantita tipica di un'insalata condita al ristorante."
+    },
+    {
+      "id": "abbacchio-scottadito",
+      "nome": "Abbacchio scottadito",
+      "alias": ["scottadito", "costolette d'agnello alla griglia", "agnello scottadito", "abbacchio alla brace"],
+      "categoria": "Secondi piatti",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "costolette-di-agnello-ai-ferri", "g": 120},
+        {"id": "olio-extravergine-di-oliva", "g": 3},
+        {"id": "sale-da-cucina", "g": 1},
+        {"id": "rosmarino-fresco", "g": 1}
+      ],
+      "resaG": 125, "porzioneG": 125, "variabilita": 0.25,
+      "porzioni": [{"label": "1 porzione (4-5 costolette, parte edibile)", "grams": 125}, {"label": "1 costoletta (parte edibile)", "grams": 25}],
+      "nota": "Peso della sola parte edibile gia cotta (una porzione da circa 200 g con l'osso). Il grasso che cola in cottura non e' contato perche' il dato CIQUAL e' gia riferito alla costoletta grigliata."
+    },
+    {
+      "id": "saltimbocca-alla-romana",
+      "nome": "Saltimbocca alla romana",
+      "alias": ["saltimbocca", "saltimbocca di vitello"],
+      "categoria": "Secondi piatti",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "fettina-di-vitello-cruda", "g": 140},
+        {"id": "prosciutto-crudo", "g": 25},
+        {"id": "salvia-fresca", "g": 2},
+        {"id": "burro", "g": 10},
+        {"id": "farina-00", "g": 5}
+      ],
+      "resaG": 135, "porzioneG": 135, "variabilita": 0.2,
+      "porzioni": [{"label": "1 porzione (3 saltimbocca)", "grams": 135}, {"label": "1 saltimbocca", "grams": 45}],
+      "nota": "Fettine di vitello (perdono circa il 30% del peso in cottura) con prosciutto crudo e salvia, infarinate e cotte nel burro; il vino bianco evapora e non e' contato."
+    },
+    {
+      "id": "coda-alla-vaccinara",
+      "nome": "Coda alla vaccinara",
+      "alias": ["coda", "coda di bue in umido", "coda alla romana"],
+      "categoria": "Secondi piatti",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "coda-di-bue-cruda", "g": 170},
+        {"id": "olio-extravergine-di-oliva", "g": 10},
+        {"id": "sedano-crudo", "g": 80},
+        {"id": "carote-crude", "g": 20},
+        {"id": "cipolla-cruda", "g": 20},
+        {"id": "pomodori-pelati-in-scatola", "g": 150},
+        {"id": "pinoli", "g": 3},
+        {"id": "uvetta", "g": 3},
+        {"id": "cacao-amaro-in-polvere", "g": 1},
+        {"id": "aglio-crudo", "g": 1}
+      ],
+      "resaG": 300, "porzioneG": 300, "variabilita": 0.3,
+      "porzioni": [{"label": "1 porzione con sugo (parte edibile)", "grams": 300}],
+      "nota": "170 g di carne edibile di coda (senza ossa) stufata a lungo con molto sedano e pomodoro; il vino evapora e non e' contato. La coda e' grassa: se il sugo viene sgrassato le calorie scendono."
+    },
+    {
+      "id": "panino-con-la-porchetta",
+      "nome": "Panino con la porchetta",
+      "alias": ["porchetta nel panino", "panino porchetta", "pagnotta con porchetta"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano"],
+      "ingredienti": [
+        {"id": "pane-casereccio", "g": 90},
+        {"id": "porchetta", "g": 80}
+      ],
+      "resaG": 170, "porzioneG": 170, "variabilita": 0.25,
+      "porzioni": [{"label": "1 panino", "grams": 170}],
+      "nota": "90 g di pane casereccio e 80 g di porchetta; la porchetta e' approssimata con la coppa di maiale arrosto CIQUAL (vedi nota dell'alimento)."
+    },
+    {
+      "id": "filetto-di-baccala-fritto",
+      "nome": "Filetto di baccalà fritto",
+      "alias": ["filetti di baccala", "baccala fritto", "baccala in pastella", "filetto di baccala"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano", "fritto"],
+      "ingredienti": [
+        {"id": "baccala-ammollato-lessato", "g": 80},
+        {"id": "farina-00", "g": 18},
+        {"id": "acqua", "g": 25},
+        {"id": "olio-di-arachide", "g": 10}
+      ],
+      "resaG": 115, "porzioneG": 115, "variabilita": 0.3,
+      "porzioni": [{"label": "1 filetto", "grams": 115}],
+      "nota": "Baccala ammollato in pastella di acqua e farina, fritto: olio assorbito stimato in 10 g (circa 9% del peso). Il baccala e' salato anche dopo l'ammollo."
+    },
+    {
+      "id": "fiori-di-zucca-fritti",
+      "nome": "Fiori di zucca fritti",
+      "alias": ["fiori di zucca ripieni", "fiori di zucca in pastella", "fiori di zucchina fritti", "fiori di zucca con mozzarella e alici"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano", "fritto"],
+      "ingredienti": [
+        {"id": "fiori-di-zucca-crudi", "g": 10},
+        {"id": "mozzarella-fior-di-latte", "g": 12},
+        {"id": "acciughe-sott-olio-sgocciolate", "g": 3},
+        {"id": "farina-00", "g": 8},
+        {"id": "acqua", "g": 12},
+        {"id": "olio-di-arachide", "g": 6}
+      ],
+      "resaG": 42, "porzioneG": 42, "variabilita": 0.3,
+      "porzioni": [{"label": "1 fiore", "grams": 42}],
+      "nota": "Fiore ripieno di mozzarella e alice, in pastella e fritto: olio assorbito stimato in 6 g a pezzo."
+    },
+    {
+      "id": "gnocchi-al-sugo",
+      "nome": "Gnocchi al sugo",
+      "alias": ["gnocchi al pomodoro", "gnocchi di patate al sugo", "gnocchi del giovedi"],
+      "categoria": "Primi piatti",
+      "tag": ["romano"],
+      "ingredienti": [
+        {"id": "gnocchi-di-patate-crudi-confezionati", "g": 200},
+        {"id": "passata-di-pomodoro", "g": 80},
+        {"id": "olio-extravergine-di-oliva", "g": 5},
+        {"id": "cipolla-cruda", "g": 5},
+        {"id": "basilico-fresco", "g": 1},
+        {"id": "parmigiano-reggiano", "g": 8}
+      ],
+      "resaG": 280, "porzioneG": 280, "variabilita": 0.2,
+      "porzioni": [{"label": "1 piatto", "grams": 280}],
+      "nota": "200 g di gnocchi di patate con sugo semplice (80 g di passata, 5 g di olio) e 8 g di parmigiano."
+    },
+    {
+      "id": "pasta-e-ceci",
+      "nome": "Pasta e ceci",
+      "alias": ["minestra di pasta e ceci", "ditalini e ceci"],
+      "categoria": "Primi piatti",
+      "tag": ["romano"],
+      "ingredienti": [
+        {"id": "pasta-di-semola-cruda", "g": 60},
+        {"id": "ceci-lessati", "g": 130},
+        {"id": "olio-extravergine-di-oliva", "g": 10},
+        {"id": "aglio-crudo", "g": 2},
+        {"id": "rosmarino-fresco", "g": 1},
+        {"id": "concentrato-di-pomodoro", "g": 5},
+        {"id": "acqua", "g": 200}
+      ],
+      "resaG": 350, "porzioneG": 350, "variabilita": 0.2,
+      "porzioni": [{"label": "1 piatto fondo", "grams": 350}],
+      "nota": "Minestra densa: 60 g di pasta, 130 g di ceci gia lessati (circa 50 g secchi), 10 g di olio, acqua di cottura in parte assorbita."
+    },
+    {
+      "id": "pasta-e-fagioli",
+      "nome": "Pasta e fagioli",
+      "alias": ["minestra di pasta e fagioli", "pasta fagioli"],
+      "categoria": "Primi piatti",
+      "tag": ["romano"],
+      "ingredienti": [
+        {"id": "pasta-di-semola-cruda", "g": 60},
+        {"id": "fagioli-borlotti-lessati", "g": 130},
+        {"id": "olio-extravergine-di-oliva", "g": 10},
+        {"id": "pomodori-pelati-in-scatola", "g": 50},
+        {"id": "sedano-crudo", "g": 15},
+        {"id": "carote-crude", "g": 15},
+        {"id": "cipolla-cruda", "g": 15},
+        {"id": "aglio-crudo", "g": 1},
+        {"id": "rosmarino-fresco", "g": 1},
+        {"id": "acqua", "g": 150}
+      ],
+      "resaG": 350, "porzioneG": 350, "variabilita": 0.2,
+      "porzioni": [{"label": "1 piatto fondo", "grams": 350}],
+      "nota": "60 g di pasta e 130 g di borlotti lessati con soffritto e pomodoro; 10 g di olio. Senza cotiche (aggiungerle alza grassi e calorie)."
+    },
+    {
+      "id": "pinsa-margherita",
+      "nome": "Pinsa margherita",
+      "alias": ["pinsa", "pinsa romana", "pinsa al pomodoro e mozzarella"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano", "pizzeria"],
+      "ingredienti": [
+        {"id": "farina-0", "g": 120},
+        {"id": "farina-di-riso", "g": 20},
+        {"id": "acqua", "g": 115},
+        {"id": "olio-extravergine-di-oliva", "g": 10},
+        {"id": "sale-da-cucina", "g": 3},
+        {"id": "lievito-di-birra-fresco", "g": 1},
+        {"id": "passata-di-pomodoro", "g": 70},
+        {"id": "mozzarella-fior-di-latte", "g": 90},
+        {"id": "basilico-fresco", "g": 1}
+      ],
+      "resaG": 365, "porzioneG": 365, "variabilita": 0.2,
+      "porzioni": [{"label": "1 pinsa", "grams": 365}, {"label": "mezza pinsa", "grams": 183}],
+      "nota": "Impasto molto idratato di grano e riso (la farina di soia del mix non e' nel database ed e' sostituita dal grano), 70 g di pomodoro e 90 g di fior di latte."
+    },
+    {
+      "id": "cornetto-semplice",
+      "nome": "Cornetto semplice",
+      "alias": ["cornetto", "cornetto vuoto", "brioche", "cornetto del bar", "cornetto semplice del bar"],
+      "categoria": "Colazione e bar",
+      "tag": ["bar"],
+      "ingredienti": [
+        {"id": "farina-00", "g": 27},
+        {"id": "burro", "g": 10},
+        {"id": "zucchero-bianco", "g": 7},
+        {"id": "uovo-intero-crudo", "g": 6},
+        {"id": "latte-intero", "g": 6},
+        {"id": "miele", "g": 1},
+        {"id": "lievito-di-birra-fresco", "g": 1.5},
+        {"id": "sale-da-cucina", "g": 0.3},
+        {"id": "acqua", "g": 4}
+      ],
+      "resaG": 55, "porzioneG": 55, "variabilita": 0.15,
+      "porzioni": [{"label": "1 cornetto", "grams": 55}],
+      "nota": "Cornetto all'italiana, piu dolce del croissant francese: 10 g di grasso di sfogliatura (burro o margarina hanno calorie simili), in cottura evapora circa il 12% del peso."
+    },
+    {
+      "id": "cornetto-alla-crema",
+      "nome": "Cornetto alla crema",
+      "alias": ["cornetto con crema", "brioche alla crema", "cornetto crema"],
+      "categoria": "Colazione e bar",
+      "tag": ["bar"],
+      "ingredienti": [
+        {"id": "farina-00", "g": 27},
+        {"id": "burro", "g": 10},
+        {"id": "zucchero-bianco", "g": 7},
+        {"id": "uovo-intero-crudo", "g": 6},
+        {"id": "latte-intero", "g": 6},
+        {"id": "miele", "g": 1},
+        {"id": "lievito-di-birra-fresco", "g": 1.5},
+        {"id": "sale-da-cucina", "g": 0.3},
+        {"id": "acqua", "g": 4},
+        {"id": "crema-pasticcera", "g": 30}
+      ],
+      "resaG": 85, "porzioneG": 85, "variabilita": 0.15,
+      "porzioni": [{"label": "1 cornetto", "grams": 85}],
+      "nota": "Il cornetto semplice con 30 g di crema pasticcera."
+    },
+    {
+      "id": "cappuccino",
+      "nome": "Cappuccino",
+      "alias": ["cappuccio", "cappuccino al bar"],
+      "categoria": "Colazione e bar",
+      "tag": ["bar"],
+      "ingredienti": [
+        {"id": "latte-intero", "g": 125},
+        {"id": "caffe-espresso", "g": 30}
+      ],
+      "resaG": 155, "porzioneG": 155, "variabilita": 0.15,
+      "porzioni": [{"label": "1 cappuccino", "grams": 155}],
+      "nota": "Espresso e 125 g di latte intero montato. Senza zucchero: una bustina (5 g) aggiunge circa 20 kcal."
+    },
+    {
+      "id": "tramezzino-prosciutto-e-formaggio",
+      "nome": "Tramezzino prosciutto e formaggio",
+      "alias": ["tramezzino", "tramezzino cotto e formaggio", "tramezzino prosciutto"],
+      "categoria": "Pizza e street food",
+      "tag": ["bar"],
+      "ingredienti": [
+        {"id": "pane-per-tramezzini-senza-crosta", "g": 40},
+        {"id": "maionese", "g": 12},
+        {"id": "prosciutto-cotto", "g": 25},
+        {"id": "emmental", "g": 12}
+      ],
+      "resaG": 89, "porzioneG": 89, "variabilita": 0.2,
+      "porzioni": [{"label": "1 tramezzino", "grams": 89}],
+      "nota": "Due fette di pane senza crosta (40 g), 12 g di maionese, 25 g di cotto e 12 g di formaggio."
+    },
+    {
+      "id": "tramezzino-tonno-e-pomodoro",
+      "nome": "Tramezzino tonno e pomodoro",
+      "alias": ["tramezzino al tonno", "tramezzino tonno"],
+      "categoria": "Pizza e street food",
+      "tag": ["bar"],
+      "ingredienti": [
+        {"id": "pane-per-tramezzini-senza-crosta", "g": 40},
+        {"id": "maionese", "g": 12},
+        {"id": "tonno-sott-olio-d-oliva-sgocciolato", "g": 25},
+        {"id": "pomodori-crudi", "g": 15}
+      ],
+      "resaG": 92, "porzioneG": 92, "variabilita": 0.2,
+      "porzioni": [{"label": "1 tramezzino", "grams": 92}],
+      "nota": "Due fette di pane senza crosta, 12 g di maionese, 25 g di tonno sott'olio sgocciolato, pomodoro."
+    },
+    {
+      "id": "cicoria-ripassata",
+      "nome": "Cicoria ripassata",
+      "alias": ["cicoria in padella", "cicoria saltata", "cicoria ripassata in padella"],
+      "categoria": "Contorni",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "cicoria-cruda", "g": 300},
+        {"id": "olio-extravergine-di-oliva", "g": 12},
+        {"id": "aglio-crudo", "g": 3},
+        {"id": "peperoncino-fresco", "g": 1},
+        {"id": "sale-da-cucina", "g": 1}
+      ],
+      "resaG": 200, "porzioneG": 200, "variabilita": 0.25,
+      "porzioni": [{"label": "1 porzione", "grams": 200}],
+      "nota": "300 g di cicoria cruda lessata, strizzata (perde un terzo del peso) e ripassata con 12 g di olio, aglio e peperoncino."
+    },
+    {
+      "id": "broccoletti-ripassati",
+      "nome": "Broccoletti ripassati",
+      "alias": ["broccoletti in padella", "cime di rapa ripassate", "broccoletti saltati", "friarielli in padella"],
+      "categoria": "Contorni",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "broccoletti-cime-di-rapa-crudi", "g": 250},
+        {"id": "olio-extravergine-di-oliva", "g": 12},
+        {"id": "aglio-crudo", "g": 3},
+        {"id": "peperoncino-fresco", "g": 1},
+        {"id": "sale-da-cucina", "g": 1}
+      ],
+      "resaG": 200, "porzioneG": 200, "variabilita": 0.25,
+      "porzioni": [{"label": "1 porzione", "grams": 200}],
+      "nota": "250 g di broccoletti (cime di rapa) sbollentati e ripassati con 12 g di olio, aglio e peperoncino."
+    },
+    {
+      "id": "pollo-con-i-peperoni",
+      "nome": "Pollo con i peperoni",
+      "alias": ["pollo ai peperoni", "pollo e peperoni", "pollo alla romana"],
+      "categoria": "Secondi piatti",
+      "tag": ["romano"],
+      "ingredienti": [
+        {"id": "coscia-di-pollo-con-pelle-cruda", "g": 180},
+        {"id": "peperone-rosso-crudo", "g": 100},
+        {"id": "peperone-giallo-crudo", "g": 100},
+        {"id": "pomodori-pelati-in-scatola", "g": 80},
+        {"id": "olio-extravergine-di-oliva", "g": 12},
+        {"id": "cipolla-cruda", "g": 20},
+        {"id": "aglio-crudo", "g": 2},
+        {"id": "sale-da-cucina", "g": 1}
+      ],
+      "resaG": 330, "porzioneG": 330, "variabilita": 0.25,
+      "porzioni": [{"label": "1 porzione", "grams": 330}],
+      "nota": "180 g di pollo con pelle (parte edibile, senza ossa) in umido con 200 g di peperoni e pomodoro; 12 g di olio. Con petto senza pelle i grassi scendono molto."
+    },
+    {
+      "id": "polpette-al-sugo",
+      "nome": "Polpette al sugo",
+      "alias": ["polpette al pomodoro", "polpette in umido", "polpette della nonna"],
+      "categoria": "Secondi piatti",
+      "tag": ["romano"],
+      "ingredienti": [
+        {"id": "macinato-di-manzo-15-grassi-crudo", "g": 100},
+        {"id": "pane-bianco", "g": 15},
+        {"id": "latte-intero", "g": 15},
+        {"id": "uovo-intero-crudo", "g": 15},
+        {"id": "parmigiano-reggiano", "g": 10},
+        {"id": "prezzemolo-fresco", "g": 2},
+        {"id": "sale-da-cucina", "g": 1},
+        {"id": "passata-di-pomodoro", "g": 150},
+        {"id": "olio-extravergine-di-oliva", "g": 8},
+        {"id": "cipolla-cruda", "g": 10}
+      ],
+      "resaG": 240, "porzioneG": 240, "variabilita": 0.25,
+      "porzioni": [{"label": "1 porzione (4 polpette con sugo)", "grams": 240}, {"label": "1 polpetta con sugo", "grams": 60}],
+      "nota": "Polpette cotte direttamente nel sugo, non fritte: se fritte prima aggiungi circa 8 g di olio (70 kcal) a porzione."
+    },
+    {
+      "id": "pasta-al-pomodoro",
+      "nome": "Pasta al pomodoro",
+      "alias": ["spaghetti al pomodoro", "pasta al sugo", "penne al pomodoro", "pasta pomodoro e basilico", "pasta al sugo di pomodoro"],
+      "categoria": "Primi piatti",
+      "tag": ["casa"],
+      "ingredienti": [
+        {"id": "pasta-di-semola-cruda", "g": 80},
+        {"id": "passata-di-pomodoro", "g": 100},
+        {"id": "olio-extravergine-di-oliva", "g": 10},
+        {"id": "cipolla-cruda", "g": 5},
+        {"id": "basilico-fresco", "g": 2},
+        {"id": "parmigiano-reggiano", "g": 5}
+      ],
+      "resaG": 265, "porzioneG": 265, "variabilita": 0.2,
+      "porzioni": [{"label": "1 piatto (80 g di pasta)", "grams": 265}],
+      "nota": "Porzione di casa: 80 g di pasta, 100 g di passata ristretta, 10 g di olio, una spolverata di parmigiano (5 g)."
+    },
+    {
+      "id": "lasagna-alla-bolognese",
+      "nome": "Lasagna alla bolognese",
+      "alias": ["lasagna", "lasagne", "lasagne al forno", "lasagne al ragu"],
+      "categoria": "Primi piatti",
+      "tag": ["casa"],
+      "ingredienti": [
+        {"id": "pasta-all-uovo-secca-cruda", "g": 250},
+        {"id": "macinato-di-manzo-15-grassi-crudo", "g": 500},
+        {"id": "passata-di-pomodoro", "g": 500},
+        {"id": "olio-extravergine-di-oliva", "g": 30},
+        {"id": "cipolla-cruda", "g": 50},
+        {"id": "carote-crude", "g": 50},
+        {"id": "sedano-crudo", "g": 50},
+        {"id": "besciamella", "g": 700},
+        {"id": "parmigiano-reggiano", "g": 100},
+        {"id": "acqua", "g": 200}
+      ],
+      "resaG": 1950, "porzioneG": 325, "variabilita": 0.2,
+      "porzioni": [{"label": "1 porzione (1/6 di teglia)", "grams": 325}],
+      "nota": "Teglia da 6 porzioni: sfoglie secche all'uovo, ragu di manzo con soffritto, besciamella fatta in casa con burro, parmigiano. Il ragu e la cottura in forno fanno evaporare circa il 20% del peso."
+    },
+    {
+      "id": "parmigiana-di-melanzane",
+      "nome": "Parmigiana di melanzane",
+      "alias": ["parmigiana", "melanzane alla parmigiana"],
+      "categoria": "Secondi piatti",
+      "tag": ["fritto", "casa"],
+      "ingredienti": [
+        {"id": "melanzane-crude", "g": 1000},
+        {"id": "olio-di-arachide", "g": 120},
+        {"id": "passata-di-pomodoro", "g": 500},
+        {"id": "olio-extravergine-di-oliva", "g": 15},
+        {"id": "mozzarella-fior-di-latte", "g": 300},
+        {"id": "parmigiano-reggiano", "g": 80},
+        {"id": "basilico-fresco", "g": 10},
+        {"id": "sale-da-cucina", "g": 5}
+      ],
+      "resaG": 1200, "porzioneG": 250, "variabilita": 0.3,
+      "porzioni": [{"label": "1 porzione", "grams": 250}],
+      "nota": "Teglia da 4-5 porzioni con melanzane fritte: olio assorbito stimato in 120 g per 1 kg di melanzane crude (12%); le melanzane perdono circa meta del peso in acqua."
+    },
+    {
+      "id": "bresaola-rucola-e-grana",
+      "nome": "Bresaola, rucola e grana",
+      "alias": ["bresaola rucola e parmigiano", "carpaccio di bresaola", "bresaola con rucola"],
+      "categoria": "Secondi piatti",
+      "tag": ["veloce"],
+      "ingredienti": [
+        {"id": "bresaola", "g": 80},
+        {"id": "rucola-cruda", "g": 30},
+        {"id": "grana-padano", "g": 20},
+        {"id": "olio-extravergine-di-oliva", "g": 8},
+        {"id": "limone-crudo-polpa", "g": 5}
+      ],
+      "resaG": 143, "porzioneG": 143, "variabilita": 0.15,
+      "porzioni": [{"label": "1 piatto", "grams": 143}],
+      "nota": "80 g di bresaola, 30 g di rucola, 20 g di scaglie di grana, 8 g di olio e limone."
+    },
+    {
+      "id": "petto-di-pollo-ai-ferri-con-olio",
+      "nome": "Petto di pollo ai ferri con un filo d'olio",
+      "alias": ["petto di pollo alla griglia", "pollo alla piastra con olio", "pollo grigliato"],
+      "categoria": "Secondi piatti",
+      "tag": ["veloce", "casa"],
+      "ingredienti": [
+        {"id": "petto-di-pollo-crudo", "g": 190},
+        {"id": "olio-extravergine-di-oliva", "g": 5},
+        {"id": "rosmarino-fresco", "g": 1},
+        {"id": "sale-da-cucina", "g": 1}
+      ],
+      "resaG": 150, "porzioneG": 150, "variabilita": 0.1,
+      "porzioni": [{"label": "1 porzione cotta", "grams": 150}],
+      "nota": "190 g di petto crudo diventano circa 150 g alla griglia (perde il 22% del peso, rapporto CIQUAL crudo/cotto); 5 g di olio a crudo."
+    },
+    {
+      "id": "insalata-di-riso",
+      "nome": "Insalata di riso",
+      "alias": ["riso freddo", "insalata di riso estiva", "riso in insalata"],
+      "categoria": "Primi piatti",
+      "tag": ["casa"],
+      "ingredienti": [
+        {"id": "riso-parboiled-crudo", "g": 70},
+        {"id": "acqua", "g": 105},
+        {"id": "tonno-sott-olio-d-oliva-sgocciolato", "g": 30},
+        {"id": "wurstel", "g": 20},
+        {"id": "uovo-sodo", "g": 25},
+        {"id": "emmental", "g": 15},
+        {"id": "cetriolini-sott-aceto", "g": 15},
+        {"id": "olive-verdi-in-salamoia-sgocciolate", "g": 10},
+        {"id": "mais-dolce-in-scatola-sgocciolato", "g": 20},
+        {"id": "piselli-in-scatola-sgocciolati", "g": 15},
+        {"id": "peperone-rosso-crudo", "g": 15},
+        {"id": "olio-extravergine-di-oliva", "g": 10}
+      ],
+      "resaG": 350, "porzioneG": 300, "variabilita": 0.25,
+      "porzioni": [{"label": "1 piatto", "grams": 300}],
+      "nota": "Riso parboiled (70 g crudi diventano 175 g cotti) con tonno, wurstel, uovo, formaggio, sottaceti e 10 g di olio; la porzione servita e' 300 g dei 350 preparati."
+    },
+    {
+      "id": "yogurt-greco-con-frutta-e-miele",
+      "nome": "Yogurt greco con frutta e miele",
+      "alias": ["yogurt con frutta", "coppa di yogurt greco", "yogurt greco frutti di bosco e miele"],
+      "categoria": "Colazione e bar",
+      "tag": ["casa", "proteico"],
+      "ingredienti": [
+        {"id": "yogurt-greco-bianco-0", "g": 170},
+        {"id": "fragole-crude", "g": 50},
+        {"id": "mirtilli-crudi", "g": 50},
+        {"id": "miele", "g": 10}
+      ],
+      "resaG": 280, "porzioneG": 280, "variabilita": 0.1,
+      "porzioni": [{"label": "1 coppa", "grams": 280}],
+      "nota": "Un vasetto grande di yogurt greco 0% (170 g), 100 g di frutti di bosco e un cucchiaino abbondante di miele (10 g)."
+    },
+    {
+      "id": "porridge-d-avena",
+      "nome": "Porridge d'avena",
+      "alias": ["porridge", "porridge con latte e banana", "avena cotta nel latte", "oatmeal"],
+      "categoria": "Colazione e bar",
+      "tag": ["casa"],
+      "ingredienti": [
+        {"id": "fiocchi-d-avena", "g": 50},
+        {"id": "latte-parzialmente-scremato", "g": 200},
+        {"id": "banana-cruda", "g": 60},
+        {"id": "cannella", "g": 1}
+      ],
+      "resaG": 290, "porzioneG": 290, "variabilita": 0.1,
+      "porzioni": [{"label": "1 ciotola", "grams": 290}],
+      "nota": "50 g di fiocchi d'avena cotti in 200 g di latte parzialmente scremato con mezza banana e cannella; evapora un po' di liquido."
+    },
+    {
+      "id": "spaghetti-aglio-olio-e-peperoncino",
+      "nome": "Spaghetti aglio, olio e peperoncino",
+      "alias": ["aglio olio", "aglio olio e peperoncino", "spaghetti aglio e olio", "spaghettata aglio e olio"],
+      "categoria": "Primi piatti",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "pasta-di-semola-cruda", "g": 100},
+        {"id": "olio-extravergine-di-oliva", "g": 15},
+        {"id": "aglio-crudo", "g": 5},
+        {"id": "peperoncino-fresco", "g": 2},
+        {"id": "prezzemolo-fresco", "g": 3},
+        {"id": "acqua", "g": 15}
+      ],
+      "resaG": 250, "porzioneG": 250, "variabilita": 0.25,
+      "porzioni": [{"label": "1 piatto", "grams": 250}],
+      "nota": "100 g di spaghetti con 15 g di olio, la quantita tipica del ristorante per emulsionare il condimento."
+    },
+    {
+      "id": "spaghetti-alle-vongole",
+      "nome": "Spaghetti alle vongole",
+      "alias": ["vongole", "linguine alle vongole", "spaghetti con le vongole", "spaghetti a vongole"],
+      "categoria": "Primi piatti",
+      "tag": ["ristorante"],
+      "ingredienti": [
+        {"id": "pasta-di-semola-cruda", "g": 100},
+        {"id": "vongole-crude-parte-edibile", "g": 60},
+        {"id": "olio-extravergine-di-oliva", "g": 15},
+        {"id": "aglio-crudo", "g": 3},
+        {"id": "prezzemolo-fresco", "g": 3},
+        {"id": "peperoncino-fresco", "g": 1}
+      ],
+      "resaG": 290, "porzioneG": 290, "variabilita": 0.25,
+      "porzioni": [{"label": "1 piatto (peso senza gusci)", "grams": 290}],
+      "nota": "100 g di pasta e 60 g di frutto di vongola (circa 300 g con i gusci); 15 g di olio; il liquido delle vongole viene assorbito dalla pasta."
+    },
+    {
+      "id": "insalata-caprese",
+      "nome": "Insalata caprese",
+      "alias": ["caprese", "pomodoro e mozzarella", "mozzarella e pomodoro"],
+      "categoria": "Secondi piatti",
+      "tag": ["veloce"],
+      "ingredienti": [
+        {"id": "mozzarella-fior-di-latte", "g": 125},
+        {"id": "pomodori-crudi", "g": 150},
+        {"id": "olio-extravergine-di-oliva", "g": 10},
+        {"id": "basilico-fresco", "g": 3},
+        {"id": "origano-secco", "g": 0.5}
+      ],
+      "resaG": 288, "porzioneG": 288, "variabilita": 0.15,
+      "porzioni": [{"label": "1 piatto", "grams": 288}],
+      "nota": "Una mozzarella da 125 g, un pomodoro grande, 10 g di olio, basilico."
+    },
+    {
+      "id": "frittata-di-zucchine",
+      "nome": "Frittata di zucchine",
+      "alias": ["frittata con zucchine", "frittata zucchine"],
+      "categoria": "Secondi piatti",
+      "tag": ["casa"],
+      "ingredienti": [
+        {"id": "uovo-intero-crudo", "g": 110},
+        {"id": "zucchine-crude", "g": 120},
+        {"id": "parmigiano-reggiano", "g": 10},
+        {"id": "olio-extravergine-di-oliva", "g": 6},
+        {"id": "sale-da-cucina", "g": 1}
+      ],
+      "resaG": 200, "porzioneG": 200, "variabilita": 0.15,
+      "porzioni": [{"label": "1 frittata (2 uova)", "grams": 200}],
+      "nota": "Due uova, 120 g di zucchine (perdono acqua in padella), 10 g di parmigiano, 6 g di olio."
+    },
+    {
+      "id": "bruschetta-al-pomodoro",
+      "nome": "Bruschetta al pomodoro",
+      "alias": ["bruschetta", "bruschette", "bruschetta pomodoro e basilico"],
+      "categoria": "Pizza e street food",
+      "tag": ["romano", "ristorante"],
+      "ingredienti": [
+        {"id": "pane-casereccio", "g": 70},
+        {"id": "pomodori-crudi", "g": 80},
+        {"id": "olio-extravergine-di-oliva", "g": 8},
+        {"id": "aglio-crudo", "g": 1},
+        {"id": "basilico-fresco", "g": 1},
+        {"id": "sale-da-cucina", "g": 0.5}
+      ],
+      "resaG": 160, "porzioneG": 160, "variabilita": 0.2,
+      "porzioni": [{"label": "1 porzione (2 fette)", "grams": 160}, {"label": "1 bruschetta", "grams": 80}],
+      "nota": "Due fette di pane casereccio tostato (70 g), pomodoro a cubetti, 8 g di olio e aglio."
+    }
+  ]
+}
