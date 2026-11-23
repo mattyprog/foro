@@ -1,0 +1,118 @@
+# Sync Garmin -> Foro.
+# Ogni 3 ore scarica i dati dalla Garmin Connect Personal API (chiave nei Secrets), li cifra con la
+# password scelta dall'utente (AES-256-GCM) e pubblica SOLO la busta cifrata sul ramo `data`, riscritto con un
+# unico commit a ogni giro: lo storico non cresce. Istruzioni: docs/GARMIN.md.
+#
+# Il repository e' pubblico, quindi anche questi log lo sono: lo script stampa solo conteggi e avvisi
+# generici. Qui niente `set -x`, niente `cat` dei file, niente stampa di variabili.
+#
+# Nota: GitHub sospende le esecuzioni programmate dopo 60 giorni senza attivita' nel repository.
+# Il push sul ramo `data` dovrebbe contare come attivita', ma non e' garantito: se arriva l'email
+# di avviso, riattiva il workflow da Actions > Garmin sync.
+
+name: Garmin sync
+
+on:
+  schedule:
+    - cron: '23 */3 * * *'
+  workflow_dispatch:
+    inputs:
+      full:
+        description: 'Riscarica tutto da capo (anche i file FIT)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: garmin-sync
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      # Finché i secret non ci sono la sync resta ferma senza errori (niente email di fallimento ogni 3 ore).
+      - name: Controlla che la sync sia configurata
+        id: cfg
+        env:
+          HAS_KEY: ${{ secrets.GARMIN_PERSONAL_API_KEY != '' }}
+          HAS_PASS: ${{ secrets.SYNC_PASSPHRASE != '' }}
+        run: |
+          if [ "$HAS_KEY" = "true" ] && [ "$HAS_PASS" = "true" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Sync Garmin non ancora configurata (mancano i secret): nessuna azione. Istruzioni in docs/GARMIN.md."
+          fi
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        if: steps.cfg.outputs.ready == 'true'
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        if: steps.cfg.outputs.ready == 'true'
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/sync/requirements.txt
+
+      - name: Installa le dipendenze (versioni e hash fissati)
+        if: steps.cfg.outputs.ready == 'true'
+        run: python -m pip install --disable-pip-version-check --no-input --quiet --require-hashes -r scripts/sync/requirements.txt
+
+      - name: Recupera il pacchetto precedente dal ramo data
+        if: steps.cfg.outputs.ready == 'true'
+        run: |
+          mkdir -p "$RUNNER_TEMP/prev"
+          if git ls-remote --exit-code --heads origin data > /dev/null 2>&1; then
+            git fetch --quiet --depth=1 origin data
+            if git show FETCH_HEAD:garmin.json.enc > "$RUNNER_TEMP/prev/garmin.json.enc" 2> /dev/null; then
+              echo "Pacchetto precedente trovato: sync incrementale."
+            else
+              rm -f "$RUNNER_TEMP/prev/garmin.json.enc"
+              echo "Ramo data senza pacchetto: sync completa."
+            fi
+          else
+            echo "Ramo data assente (prima sync): sync completa."
+          fi
+
+      - name: Sync Garmin
+        if: steps.cfg.outputs.ready == 'true'
+        env:
+          GARMIN_PERSONAL_API_KEY: ${{ secrets.GARMIN_PERSONAL_API_KEY }}
+          SYNC_PASSPHRASE: ${{ secrets.SYNC_PASSPHRASE }}
+          PRIVACY_TRIM_M: ${{ vars.PRIVACY_TRIM_M }}
+          SYNC_TZ: ${{ vars.SYNC_TZ }}
+          FULL: ${{ inputs.full }}
+        run: |
+          args=(--out "$RUNNER_TEMP/out")
+          if [ -s "$RUNNER_TEMP/prev/garmin.json.enc" ]; then
+            args+=(--previous "$RUNNER_TEMP/prev/garmin.json.enc")
+          fi
+          if [ "$FULL" = "true" ]; then
+            args+=(--full)
+          fi
+          python scripts/sync/garmin_sync.py "${args[@]}"
+
+      - name: Pubblica sul ramo data (un solo commit)
+        if: steps.cfg.outputs.ready == 'true'
+        run: |
+          out="$RUNNER_TEMP/out"
+          if [ ! -s "$out/garmin.json.enc" ] || [ ! -s "$out/meta.json" ]; then
+            echo "Niente da pubblicare: resta il pacchetto precedente."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout --quiet --orphan data-publish
+          git rm -r --quiet --cached .
+          cp "$out/garmin.json.enc" "$out/meta.json" .
+          git add -f garmin.json.enc meta.json
+          git commit --quiet -m "Dati Garmin cifrati"
+          git push --quiet --force origin HEAD:refs/heads/data
+          echo "Busta cifrata pubblicata sul ramo data."
