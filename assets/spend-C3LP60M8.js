@@ -1,0 +1,1 @@
+import{d as e,u as t}from"./dates-ByArIHDS.js";async function n(n){if(!Number.isFinite(n)||n<=0)return;let r=await t(`gemini.spentUsd`,0);await e(`gemini.spentUsd`,r+n)}export{n as t};
